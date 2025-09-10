@@ -85,7 +85,7 @@ def process_items():
             
             # Upload this chunk
             print(f"Uploading {len(items_data)} items from chunk {current_id}-{chunk_end-1}")
-            upload_data(table, f"items_chunk_{current_id}_{chunk_end-1}")
+            upload_data(table, f"hackernews_items")
             
             # Update state after successful upload
             save_state("items", {"last_item_id": chunk_end - 1})
